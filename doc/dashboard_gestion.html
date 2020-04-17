@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+
+
+	<title>Dashboard Gestion</title>
+</head>
+<body>
+<br>
+<div class="container-fluid">
+	
+<h3>Dashboard Gestión de Voluntarios</h3>
+<hr>
+
+</div>
+
+<div class="d-flex justify-content-between">
+
+<div class="col-4">
+
+<nav class="navbar navbar-dark bg-primary">
+
+	 <span class="navbar-text text-white font-weight-bold" style="font-size:15px;">
+    Rotación Roles con previa
+  </span>
+  <select id="selectroles">
+  	<option value="0" selected>Todos los roles</option>
+  	<option value="1">ALCALDE</option>
+  	<option value="2">JEFE/A DE TRABAJO</option>
+  	<option value="3">CAPITÁN/A</option>
+  	<option value="4">JEFE/A DE CAMIÓN</option>
+  	<option value="5">PPAA</option>
+  	<option value="6">MONITOR/A</option>
+  	<option value="7">INTENDENTE/A</option>
+  </select>
+</nav>
+<div class="tab-content" id="TabRolesPrevia">
+  	
+	<table class="table table-hover table-sm" id="TablaRolesPrevia">
+	  <thead class="thead-light">
+    <tr>
+      <th scope="col" style="font-size:13px;">NOMBRE</th>
+      <th scope="col" style="font-size:13px;">¿VECES?</th>
+      <th scope="col" style="font-size:13px;">ÚLTIMO ROL</th>
+      <th scope="col" style="font-size:13px;">FECHA</th>
+    </tr>
+  </thead>
+		<tbody>
+			<tr><td scope="col">Voluntario Previa 1</td><td scope="col" class="text-center">1</td><td scope="col">Intendente</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col">Voluntario Previa 2</td><td scope="col" class="text-center">2</td><td scope="col">Monitor</td><td scope="col">Marzo 2019</td></tr>
+			<tr><td scope="col">Voluntario Previa 3</td><td scope="col" class="text-center">3</td><td scope="col">Jefe de escuela</td><td scope="col">Enero 2018</td></tr>
+			<tr><td scope="col">Voluntario Previa 4</td><td scope="col" class="text-center">4</td><td scope="col">Intendente</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col">Voluntario Previa 5</td><td scope="col" class="text-center">18</td><td scope="col">Intendente</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col">Voluntario Previa 6</td><td scope="col" class="text-center">5</td><td scope="col">Monitor</td><td scope="col">Marzo 2019</td></tr>
+			<tr><td scope="col">Voluntario Previa 7</td><td scope="col" class="text-center">12</td><td scope="col">Jefe de escuela</td><td scope="col">Enero 2018</td></tr>
+			<tr><td scope="col">Voluntario Previa 8</td><td scope="col" class="text-center">4</td><td scope="col">Intendente</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col">Voluntario Previa 9</td><td scope="col" class="text-center">10</td><td scope="col">Intendente</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col">Voluntario Previa 10</td><td scope="col" class="text-center">5</td><td scope="col">Monitor</td><td scope="col">Marzo 2019</td></tr>
+			<tr><td scope="col">Voluntario Previa 11</td><td scope="col" class="text-center">9</td><td scope="col">Jefe de escuela</td><td scope="col">Enero 2018</td></tr>
+			<tr><td scope="col">Voluntario Previa 12</td><td scope="col" class="text-center">4</td><td scope="col">Intendente</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col">Voluntario Previa 13</td><td scope="col" class="text-center">2</td><td scope="col">Intendente</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col">Voluntario Previa 14</td><td scope="col" class="text-center">2</td><td scope="col">Monitor</td><td scope="col">Marzo 2019</td></tr>
+			<tr><td scope="col">Voluntario Previa 15</td><td scope="col" class="text-center">5</td><td scope="col">Jefe de escuela</td><td scope="col">Enero 2018</td></tr>
+			<tr><td scope="col">Voluntario Previa 16</td><td scope="col" class="text-center">4</td><td scope="col">Intendente</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col">Voluntario Previa 17</td><td scope="col" class="text-center">16</td><td scope="col">Intendente</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col">Voluntario Previa 18</td><td scope="col" class="text-center">2</td><td scope="col">Monitor</td><td scope="col">Marzo 2019</td></tr>
+			<tr><td scope="col">Voluntario Previa 19</td><td scope="col" class="text-center">3</td><td scope="col">Jefe de escuela</td><td scope="col">Enero 2018</td></tr>
+			<tr><td scope="col">Voluntario Previa 20</td><td scope="col" class="text-center">5</td><td scope="col">Intendente</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col">Voluntario Previa 21</td><td scope="col" class="text-center">1</td><td scope="col">Intendente</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col">Voluntario Previa 22</td><td scope="col" class="text-center">2</td><td scope="col">Monitor</td><td scope="col">Marzo 2019</td></tr>
+			<tr><td scope="col">Voluntario Previa 23</td><td scope="col" class="text-center">7</td><td scope="col">Jefe de escuela</td><td scope="col">Enero 2018</td></tr>
+			<tr><td scope="col">Voluntario Previa 24</td><td scope="col" class="text-center">4</td><td scope="col">Intendente</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col">Voluntario Previa 25</td><td scope="col" class="text-center">9</td><td scope="col">Intendente</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col">Voluntario Previa 26</td><td scope="col" class="text-center">2</td><td scope="col">Monitor</td><td scope="col">Marzo 2019</td></tr>
+			<tr><td scope="col">Voluntario Previa 27</td><td scope="col" class="text-center">8</td><td scope="col">Jefe de escuela</td><td scope="col">Enero 2018</td></tr>
+			<tr><td scope="col">Voluntario Previa 28</td><td scope="col" class="text-center">4</td><td scope="col">Intendente</td><td scope="col">Diciembre 2020</td></tr>
+		</tbody>
+	</table>
+</div>
+</div>
+
+<div class="col-4">
+
+<div class="tab-content" id="myTabContent">
+  	
+	<table class="table table-hover table-sm" id="TablaJCs">
+	  <thead class="thead-light">
+    <tr>
+      <th scope="col">NOMBRE</th>
+      <th scope="col">¿CUÁNTAS VECES?</th>
+      <th scope="col">FECHA ÚLTIMO</th>
+    </tr>
+  </thead>
+		<tbody>
+			<tr><td scope="col" >Voluntario JC 1</td><td scope="col" class="text-center">1</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col" >Voluntario JC 2</td><td scope="col" class="text-center">2</td><td scope="col">Marzo 2019</td></tr>
+			<tr><td scope="col" >Voluntario JC 3</td><td scope="col" class="text-center">3</td><td scope="col">Enero 2018</td></tr>
+			<tr><td scope="col" >Voluntario JC 4</td><td scope="col" class="text-center">4</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col" >Voluntario JC 5</td><td scope="col" class="text-center">1</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col" >Voluntario JC 6</td><td scope="col" class="text-center">2</td><td scope="col">Marzo 2019</td></tr>
+			<tr><td scope="col" >Voluntario JC 7</td><td scope="col" class="text-center">6</td><td scope="col">Enero 2018</td></tr>
+			<tr><td scope="col" >Voluntario JC 8</td><td scope="col" class="text-center">4</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col" >Voluntario JC 9</td><td scope="col" class="text-center">10</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col" >Voluntario JC 10</td><td scope="col" class="text-center">22</td><td scope="col">Marzo 2019</td></tr>
+			<tr><td scope="col" >Voluntario JC 11</td><td scope="col" class="text-center">35</td><td scope="col">Enero 2018</td></tr>
+			<tr><td scope="col" >Voluntario JC 12</td><td scope="col" class="text-center">5</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col" >Voluntario JC 13</td><td scope="col" class="text-center">1</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col" >Voluntario JC 14</td><td scope="col" class="text-center">8</td><td scope="col">Marzo 2019</td></tr>
+			<tr><td scope="col" >Voluntario JC 15</td><td scope="col" class="text-center">3</td><td scope="col">Enero 2018</td></tr>
+			<tr><td scope="col" >Voluntario JC 16</td><td scope="col" class="text-center">0</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col" >Voluntario JC 17</td><td scope="col" class="text-center">1</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col" >Voluntario JC 18</td><td scope="col" class="text-center">2</td><td scope="col">Marzo 2019</td></tr>
+			<tr><td scope="col" >Voluntario JC 19</td><td scope="col" class="text-center">5</td><td scope="col">Enero 2018</td></tr>
+			<tr><td scope="col" >Voluntario JC 20</td><td scope="col" class="text-center">4</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col" >Voluntario JC 21</td><td scope="col" class="text-center">1</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col" >Voluntario JC 22</td><td scope="col" class="text-center">6</td><td scope="col">Marzo 2019</td></tr>
+			<tr><td scope="col" >Voluntario JC 23</td><td scope="col" class="text-center">3</td><td scope="col">Enero 2018</td></tr>
+			<tr><td scope="col" >Voluntario JC 24</td><td scope="col" class="text-center">9</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col" >Voluntario JC 25</td><td scope="col" class="text-center">1</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col" >Voluntario JC 26</td><td scope="col" class="text-center">5</td><td scope="col">Marzo 2019</td></tr>
+			<tr><td scope="col" >Voluntario JC 27</td><td scope="col" class="text-center">2</td><td scope="col">Enero 2018</td></tr>
+			<tr><td scope="col" >Voluntario JC 28</td><td scope="col" class="text-center">4</td><td scope="col">Diciembre 2020</td></tr>
+		</tbody>
+	</table>
+
+</div>
+</div>
+
+<div class="col-4">
+
+<nav class="navbar navbar-dark bg-warning">
+
+	 <span class="navbar-text text-reset font-weight-bold" style="font-size:15px;">
+    Eventos especiales
+  </span>
+</nav>
+<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">PIVI</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Módulo</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Rediseño</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+  	
+	<table class="table table-hover table-sm" id="TablaPIVI">
+	  <thead class="thead-light">
+    <tr>
+      <th scope="col">NOMBRE</th>
+      <th scope="col">ROL</th>
+      <th scope="col">FECHA</th>
+    </tr>
+  </thead>
+		<tbody>
+			<tr><td>Iñaki Agostini Zubillaga</td><td>CUADRILLERO/A</td><td>Diciembre 2019</td></tr>
+			<tr><td>Franco Patronelli</td><td>CUADRILLERO/A</td><td>Diciembre 2020</td></tr>
+			<tr><td>Franco Yosco</td><td>CUADRILLERO/A</td><td>Febrero 2020</td></tr>
+			<tr><td>Juliana Arana</td><td>CUADRILLERO/A</td><td>Febrero 2020</td></tr>
+		</tbody>
+	</table>
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+  	
+  	<table class="table table-hover table-sm" id="TablaModulo">
+	  <thead class="thead-light">
+    <tr>
+      <th scope="col">NOMBRE</th>
+      <th scope="col">ROL</th>
+      <th scope="col">FECHA</th>
+    </tr>
+  </thead>
+		<tbody>
+			<tr><td>Voluntario Modulo</td><td>CUADRILLERO/A</td><td>Diciembre 2019</td></tr>
+			<tr><td>Voluntario Modulo</td><td>CUADRILLERO/A</td><td>Diciembre 2020</td></tr>
+			<tr><td>Voluntario Modulo</td><td>CUADRILLERO/A</td><td>Febrero 2020</td></tr>
+			<tr><td>Voluntairo Modulo</td><td>CUADRILLERO/A</td><td>Febrero 2020</td></tr>
+		</tbody>
+	</table>
+
+  </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+  	
+  	<table class="table table-hover table-sm" id="TablaRediseño">
+	  <thead class="thead-light">
+    <tr>
+      <th scope="col">NOMBRE</th>
+      <th scope="col">ROL</th>
+      <th scope="col">FECHA</th>
+    </tr>
+  </thead>
+		<tbody>
+			<tr><td>Voluntario Rediseño</td><td>CUADRILLERO/A</td><td>Diciembre 2019</td></tr>
+			<tr><td>Voluntario Rediseño</td><td>CUADRILLERO/A</td><td>Diciembre 2020</td></tr>
+			<tr><td>Voluntario Rediseño</td><td>CUADRILLERO/A</td><td>Febrero 2020</td></tr>
+			<tr><td>Voluntario Rediseño</td><td>CUADRILLERO/A</td><td>Febrero 2020</td></tr>
+		</tbody>
+	</table>
+
+  </div>
+</div>
+
+<div class="tab-content" id="myTabContent">
+  	
+	<table class="table table-hover table-sm" id="TablaNO">
+	  <thead class="thead-light">
+  <tr>
+      <th scope="col" style="font-size:13px;">NOMBRE</th>
+      <th scope="col" style="font-size:13px;">¿VECES?</th>
+      <th scope="col" style="font-size:13px;">ÚLTIMO ROL</th>
+      <th scope="col" style="font-size:13px;">FECHA</th>
+    </tr>
+  </thead>
+		<tbody>
+			<tr><td scope="col">Involuntario 1</td><td scope="col" class="text-center">1</td><td scope="col">Intendente</td><td scope="col">Diciembre 2020</td></tr>
+			<tr><td scope="col">Involuntario 2</td><td scope="col" class="text-center">2</td><td scope="col">Monitor</td><td scope="col">Marzo 2019</td></tr>
+			<tr><td scope="col">Involuntario 3</td><td scope="col" class="text-center">3</td><td scope="col">Jefe de cuadrilla</td><td scope="col">Enero 2018</td></tr>
+								
+			<tr><td scope="col">Involuntario 4</td><td scope="col" class="text-center">4</td><td scope="col">jefe de escuela</td><td scope="col">Diciembre 2020</td></tr>
+		</tbody>
+	</table>
+
+</div>
+</div>
+
+</div>
+</body>
+<script>
+	
+$(document).ready( function () {
+    $('#TablaRolesPrevia').DataTable({
+        "scrollY":        "60vh",
+        "scrollCollapse": true,
+        "paging":         false,
+        "info": false,
+        "dom": '<"wrapper1"f>t',
+    	"language": {
+            "lengthMenu": "Mostrar _MENU_ voluntarixs por pagina",
+            "zeroRecords": "Ningún voluntarixs cumple el criterio de búsqueda",
+            "info": "Mostrando _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay voluntarixs en la base de datos",
+            "infoFiltered": "(filtrado de _MAX_ voluntarixs en total)",
+            "search": "_INPUT_",
+            "searchPlaceholder": "Buscar"},
+        })
+ 
+//$("div.toolbar").css('float','left');
+  //  $("#TablaRolesPrevia_filter").css('float','right');
+//   
+   $("div.wrapper1").addClass("bg-primary d-flex justify-content-between align-items-center");
+  
+  $("#TablaRolesPrevia_filter").addClass('d-inline-block p-3');
+
+
+   // $("div.toolbar").html('<nav class="navbar navbar-dark bg-primary"><span class="navbar-text text-white font-weight-bold" style="font-size:15px;">Rotación Roles con previa</span></nav>');
+
+    $('#TablaJCs').DataTable({
+        "scrollY":        "67vh",
+        "scrollCollapse": true,
+        "paging":         false,
+        "info": false,
+        "dom": '<"wrapper2"f>t',
+      "language": {
+            "lengthMenu": "Mostrar _MENU_ voluntarixs por pagina",
+            "zeroRecords": "Ningún voluntarixs cumple el criterio de búsqueda",
+            "info": "Mostrando _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay voluntarixs en la base de datos",
+            "infoFiltered": "(filtrado de _MAX_ voluntarixs en total)",
+            "search": "_INPUT_",
+            "searchPlaceholder": "Buscar"},
+    	
+  
+    });
+
+    $("div.wrapper2").addClass("bg-primary d-flex justify-content-between align-items-center");
+    $("div.wrapper2").prepend('<span class="mr-auto p-3 text-white font-weight-bold d-inline-block" style="font-size:15px;">Rotación Jefxs de Cuadrilla</span>');
+    $("#TablaJCs_filter").addClass('d-inline-block p-3');
+
+    $('#TablaPIVI').DataTable({
+        "scrollY":        "20vh",
+        "scrollCollapse": true,
+        "paging":         false,
+        "info": false,
+    	"language": {
+            "lengthMenu": "Mostrar _MENU_ voluntarixs por pagina",
+            "zeroRecords": "Ningún voluntarixs cumple el criterio de búsqueda",
+            "info": "Mostrando _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay voluntarixs en la base de datos",
+            "infoFiltered": "(filtrado de _MAX_ voluntarixs en total)",
+             "search": "_INPUT_",
+            "searchPlaceholder": "Buscar"}
+    });
+    $('#TablaModulo').DataTable({
+        "scrollY":        "20vh",
+        "scrollCollapse": true,
+        "paging":         false,
+        "info": false,
+    	"language": {
+            "lengthMenu": "Mostrar _MENU_ voluntarixs por pagina",
+            "zeroRecords": "Ningún voluntarixs cumple el criterio de búsqueda",
+            "info": "Mostrando _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay voluntarixs en la base de datos",
+            "infoFiltered": "(filtrado de _MAX_ voluntarixs en total)",
+             "search": "_INPUT_",
+            "searchPlaceholder": "Buscar"}
+    });
+    $('#TablaRediseño').DataTable({
+        "scrollY":        "20vh",
+        "scrollCollapse": true,
+        "paging":         false,
+        "info": false,
+    	"language": {
+            "lengthMenu": "Mostrar _MENU_ voluntarixs por pagina",
+            "zeroRecords": "Ningún voluntarixs cumple el criterio de búsqueda",
+            "info": "Mostrando _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay voluntarixs en la base de datos",
+            "infoFiltered": "(filtrado de _MAX_ voluntarixs en total)",
+             "search": "_INPUT_",
+            "searchPlaceholder": "Buscar"}
+    });
+    $('#TablaNO').DataTable({
+        "scrollY":        "20vh",
+        "scrollCollapse": true,
+        "paging":         false,
+        "info": false,
+        "dom": '<"wrapper3"f>t',
+    	"language": {
+            "lengthMenu": "Mostrar _MENU_ voluntarixs por pagina",
+            "zeroRecords": "Ningún voluntarixs cumple el criterio de búsqueda",
+            "info": "Mostrando _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay voluntarixs en la base de datos",
+            "infoFiltered": "(filtrado de _MAX_ voluntarixs en total)",
+             "search": "_INPUT_",
+            "searchPlaceholder": "Buscar"}
+    } );
+
+    $("div.wrapper3").addClass("bg-danger d-flex justify-content-between align-items-center");
+    $("div.wrapper3").prepend('<span class="mr-auto p-3 text-white font-weight-bold d-inline-block" style="font-size:15px;">Nos dijeron que no...</span>');
+    $("#TablaNO_filter").addClass('d-inline-block p-3');
+
+
+});
+
+$("#selectroles").change(function() {
+
+  //alert($('#selectroles option:selected').val())
+
+  if ($('#selectroles option:selected').val()==7) {
+
+    $('#TablaRolesPrevia').DataTable().destroy()
+    $('#TablaRolesPrevia').remove()
+    $('#TabRolesPrevia').prepend('<table class="table table-hover table-sm" id="TablaIntendentes"><thead class="thead-light"><tr><th scope="col" style="font-size:13px;">NOMBRE</th><th scope="col" style="font-size:13px;">¿VECES?</th><th scope="col" style="font-size:13px;">FECHA ÚLTIMA VEZ</th></tr></thead><tbody><tr><td scope="col">Voluntario Previa 1</td><td scope="col" class="text-center">1</td><td scope="col">Diciembre 2020</td></tr><tr><td scope="col">Voluntario Previa 4</td><td scope="col" class="text-center">3</td><td scope="col">Junio 2018</td></tr><tr><td scope="col">Voluntario Previa 5</td><td scope="col" class="text-center">5</td><td scope="col">Enenro 2019</td></tr><tr><td scope="col">Voluntario Previa 8</td><td scope="col" class="text-center">2</td><td scope="col">Diciembre 2020</td></tr><tr><td scope="col">Voluntario Previa 9</td><td scope="col" class="text-center">10</td><td scope="col">Diciembre 2020</td></tr></tbody>');
+
+       $('#TablaIntendentes').DataTable({
+        "scrollY":        "60vh",
+        "scrollCollapse": true,
+        "paging":         false,
+        "info": false,
+        "dom": '<"wrapper1"f>t',
+      "language": {
+            "lengthMenu": "Mostrar _MENU_ voluntarixs por pagina",
+            "zeroRecords": "Ningún voluntarixs cumple el criterio de búsqueda",
+            "info": "Mostrando _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay voluntarixs en la base de datos",
+            "infoFiltered": "(filtrado de _MAX_ voluntarixs en total)",
+            "search": "_INPUT_",
+            "searchPlaceholder": "Buscar"},
+        })
+
+       $("div.wrapper1").addClass("bg-primary d-flex justify-content-between align-items-center");
+  
+      $("#TablaIntendentes_filter").addClass('d-inline-block p-3');
+
+  }
+
+});
+
+
+</script>
+</html>
